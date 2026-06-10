@@ -1,0 +1,53 @@
+name: Auto Version Bump
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  bump-version:
+    # Skip commits already made by this workflow to avoid an infinite loop
+    if: "!contains(github.event.head_commit.message, '[skip ci]') && github.event.head_commit.author.name != 'github-actions[bot]'"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Use GITHUB_TOKEN so the push can trigger Vercel deploys
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump patch version in package.json
+        id: bump
+        run: |
+          CURRENT=$(node -p "require('./package.json').version")
+          echo "Current: $CURRENT"
+
+          NEW=$(node -e "
+            const [maj, min, pat] = '$CURRENT'.split('.').map(Number);
+            console.log([maj, min, pat + 1].join('.'));
+          ")
+          echo "New: $NEW"
+
+          node -e "
+            const fs  = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            pkg.version = '$NEW';
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
+
+          echo "new_version=$NEW" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        run: |
+          git add package.json
+          git commit -m "chore: bump version to v${{ steps.bump.outputs.new_version }} [skip ci]"
+          git push
