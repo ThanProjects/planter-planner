@@ -1,17 +1,3 @@
-/* ── SVG helpers ── */
-const S = { // shared SVG style strings
-  front:  'fill="#fff" stroke="#2c2c2c" stroke-width="1.5" stroke-linejoin="round"',
-  top:    'fill="#eee9e0" stroke="#2c2c2c" stroke-width="1.5" stroke-linejoin="round"',
-  right:  'fill="#ddd8cf" stroke="#2c2c2c" stroke-width="1.5" stroke-linejoin="round"',
-  leg:    'fill="#d4cfc5" stroke="#2c2c2c" stroke-width="1.5" stroke-linejoin="round"',
-  dim:    'stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"',
-  tick:   'stroke="#9ca3af" stroke-width="1.2"',
-  label:  'font-size="13" fill="#374151" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,sans-serif"',
-  grain:  'stroke="#e3ddd2" stroke-width="0.8"',
-  title:  'font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,BlinkMacSystemFont,sans-serif"',
-  note:   'font-size="11" fill="#9ca3af" font-family="-apple-system,BlinkMacSystemFont,sans-serif"',
-};
-
 /* ── Planter data ── */
 const planters = [
 
@@ -51,36 +37,20 @@ const planters = [
       'Sand all surfaces and apply two coats of exterior stain or sealer.',
     ],
     tip: '<strong>Tip:</strong> Cedar is naturally rot-resistant and smells great. Redwood or pressure-treated pine also work well outdoors.',
-    svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg">
-  <!-- Right face: poly FRT, FRB, RRB, RRT -->
-  <polygon points="291,143 307,127 307,171 291,187" ${S.right}/>
-  <!-- Top face: FLT FRT RRT RLT -->
-  <polygon points="93,143 291,143 307,127 109,127" ${S.top}/>
-  <!-- Front face -->
-  <rect x="93" y="143" width="198" height="44" ${S.front}/>
-  <!-- Wood grain -->
-  <line x1="93" y1="157" x2="291" y2="157" ${S.grain}/>
-  <line x1="93" y1="171" x2="291" y2="171" ${S.grain}/>
-  <!-- Drainage hole dots on front bottom -->
-  <circle cx="152" cy="184" r="2.5" fill="#bbb"/>
-  <circle cx="192" cy="184" r="2.5" fill="#bbb"/>
-  <circle cx="232" cy="184" r="2.5" fill="#bbb"/>
-  <!-- Dim: width -->
-  <line x1="93" y1="204" x2="291" y2="204" ${S.dim}/>
-  <line x1="93" y1="199" x2="93" y2="209" ${S.tick}/>
-  <line x1="291" y1="199" x2="291" y2="209" ${S.tick}/>
-  <text x="192" y="220" text-anchor="middle" ${S.label}>36"</text>
-  <!-- Dim: height -->
-  <line x1="77" y1="143" x2="77" y2="187" ${S.dim}/>
-  <line x1="72" y1="143" x2="82" y2="143" ${S.tick}/>
-  <line x1="72" y1="187" x2="82" y2="187" ${S.tick}/>
-  <text x="55" y="169" text-anchor="middle" ${S.label}>8"</text>
-  <!-- Depth label -->
-  <text x="313" y="147" ${S.note}>8" deep</text>
-  <!-- Drain hole note -->
-  <text x="192" y="245" text-anchor="middle" ${S.note}>3 drainage holes (⅜")</text>
-  <!-- Dimension title -->
-  <text x="200" y="26" text-anchor="middle" ${S.title}>36" × 8" × 8"</text>
+    svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
+<polygon points="314.1,216.0 272.5,240.0 272.5,192.0 314.1,168.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="314.1,216.0 272.5,240.0 272.5,192.0 314.1,168.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="127.0,60.0 314.1,168.0 272.5,192.0 85.4,84.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="127.0,60.0 314.1,168.0 272.5,192.0 85.4,84.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="127.0,108.0 314.1,216.0 314.1,168.0 127.0,60.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="127.0,108.0 314.1,216.0 314.1,168.0 127.0,60.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">36" × 8" × 8"</text>
+<line x1="127.0" y1="245" x2="314.1" y2="245" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
+<line x1="127.0" y1="240" x2="127.0" y2="250" stroke="#9ca3af" stroke-width="1.2"/>
+<line x1="314.1" y1="240" x2="314.1" y2="250" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="220.5" y="262" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">36"</text>
+<text x="323" y="183" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">8" deep</text>
+<text x="100" y="88" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif" text-anchor="middle">8" H</text>
 </svg>`
   },
 
@@ -127,46 +97,8 @@ const planters = [
       'Sand smooth and apply two coats of exterior stain & sealer.',
     ],
     tip: '<strong>Tip:</strong> Measure and cut the trim boards (F, G, H) after the box is assembled — natural lumber varies slightly and this ensures a perfectly flush fit.',
-    svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg">
-  <!-- Right face of box -->
-  <polygon points="233,148 258,123 258,220 233,245" ${S.right}/>
-  <!-- Top face of box -->
-  <polygon points="143,148 233,148 258,123 168,123" ${S.top}/>
-  <!-- Front face of box (boards between legs) -->
-  <rect x="143" y="148" width="90" height="97" ${S.front}/>
-  <!-- Wood grain on front -->
-  <line x1="143" y1="164" x2="233" y2="164" ${S.grain}/>
-  <line x1="143" y1="180" x2="233" y2="180" ${S.grain}/>
-  <line x1="143" y1="196" x2="233" y2="196" ${S.grain}/>
-  <line x1="143" y1="212" x2="233" y2="212" ${S.grain}/>
-  <line x1="143" y1="228" x2="233" y2="228" ${S.grain}/>
-  <!-- Left front leg (overlaid, extends to floor at y=253) -->
-  <rect x="143" y="148" width="8" height="105" ${S.leg}/>
-  <!-- Right front leg -->
-  <rect x="225" y="148" width="8" height="105" ${S.leg}/>
-  <!-- Right-face right leg depth -->
-  <polygon points="233,148 241,140 241,244 233,253" ${S.leg}/>
-  <!-- Trim board on top of front face -->
-  <rect x="143" y="148" width="90" height="10" fill="#ede8e0" stroke="#2c2c2c" stroke-width="1.2"/>
-  <!-- Floor line -->
-  <line x1="120" y1="253" x2="270" y2="253" stroke="#ddd8cf" stroke-width="1"/>
-  <!-- Dim: height (total leg) -->
-  <line x1="127" y1="148" x2="127" y2="253" ${S.dim}/>
-  <line x1="122" y1="148" x2="132" y2="148" ${S.tick}/>
-  <line x1="122" y1="253" x2="132" y2="253" ${S.tick}/>
-  <text x="107" y="205" text-anchor="middle" ${S.label}>24"</text>
-  <!-- Dim: width -->
-  <line x1="143" y1="268" x2="233" y2="268" ${S.dim}/>
-  <line x1="143" y1="263" x2="143" y2="273" ${S.tick}/>
-  <line x1="233" y1="263" x2="233" y2="273" ${S.tick}/>
-  <text x="188" y="283" text-anchor="middle" ${S.label}>22½"</text>
-  <!-- Depth label -->
-  <text x="263" y="135" ${S.note}>18" deep</text>
-  <!-- Leg annotation -->
-  <text x="153" y="143" font-size="10" fill="#9ca3af" font-family="-apple-system,sans-serif">corner legs</text>
-  <!-- Title -->
-  <text x="200" y="22" text-anchor="middle" ${S.title}>22½" × 18" × 24"</text>
-</svg>`
+    thumbSvg: `<img src="images/classic-planter-thumb.png" style="width:100%;height:100%;object-fit:contain" alt="Classic Planter Box isometric view">`,
+    svg: `<img src="images/classic-planter-detail.png" style="width:100%;height:auto;display:block;border-radius:8px" alt="Classic Planter Box exploded view with labeled parts">`,
   },
 
   /* 3 ─ Elevated Planter Box ────────────────────────────── */
@@ -208,43 +140,23 @@ const planters = [
       'Sand all surfaces and apply exterior stain or sealer, paying extra attention to end grain.',
     ],
     tip: '<strong>Tip:</strong> Cut legs slightly long, then trim all four to the same length after assembly to keep the planter perfectly level.',
-    svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg">
-  <!-- Box: right face -->
-  <polygon points="222,147 247,122 247,177 222,202" ${S.right}/>
-  <!-- Box: top face -->
-  <polygon points="78,147 222,147 247,122 103,122" ${S.top}/>
-  <!-- Box: front face -->
-  <rect x="78" y="147" width="144" height="55" ${S.front}/>
-  <!-- Wood grain box front -->
-  <line x1="78" y1="165" x2="222" y2="165" ${S.grain}/>
-  <line x1="78" y1="183" x2="222" y2="183" ${S.grain}/>
-  <!-- Front-left leg -->
-  <rect x="78" y="202" width="8" height="66" ${S.leg}/>
-  <!-- Front-right leg -->
-  <rect x="214" y="202" width="8" height="66" ${S.leg}/>
-  <!-- Back-left leg (partially visible) -->
-  <rect x="103" y="177" width="6" height="55" fill="#ccc9bf" stroke="#2c2c2c" stroke-width="1" opacity="0.6"/>
-  <!-- Back-right leg (partially visible) -->
-  <rect x="241" y="177" width="6" height="48" fill="#ccc9bf" stroke="#2c2c2c" stroke-width="1" opacity="0.5"/>
-  <!-- Floor line -->
-  <line x1="65" y1="268" x2="265" y2="268" stroke="#e0dbd1" stroke-width="1"/>
-  <!-- Dim: total height -->
-  <line x1="60" y1="147" x2="60" y2="268" ${S.dim}/>
-  <line x1="55" y1="147" x2="65" y2="147" ${S.tick}/>
-  <line x1="55" y1="268" x2="65" y2="268" ${S.tick}/>
-  <text x="40" y="212" text-anchor="middle" ${S.label}>32"</text>
-  <!-- Dim: length -->
-  <line x1="78" y1="280" x2="222" y2="280" ${S.dim}/>
-  <line x1="78" y1="275" x2="78" y2="285" ${S.tick}/>
-  <line x1="222" y1="275" x2="222" y2="285" ${S.tick}/>
-  <text x="150" y="293" text-anchor="middle" ${S.label}>48"</text>
-  <!-- Box height brace -->
-  <line x1="232" y1="147" x2="232" y2="202" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="3 3"/>
-  <text x="252" y="178" font-size="11" fill="#9ca3af" font-family="-apple-system,sans-serif">10" box</text>
-  <!-- Depth label -->
-  <text x="252" y="130" ${S.note}>24" deep</text>
-  <!-- Title -->
-  <text x="200" y="22" text-anchor="middle" ${S.title}>48" × 24" × 32"</text>
+    svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
+<polygon points="100.3,179.8 91.3,185.0 91.3,108.0 100.3,102.8" fill="#B09000" stroke="#2A1800" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
+<polygon points="245.8,263.8 236.7,269.0 236.7,192.0 245.8,186.8" fill="#B09000" stroke="#2A1800" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="309.5,150.0 236.7,192.0 236.7,157.0 309.5,115.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="309.5,150.0 236.7,192.0 236.7,157.0 309.5,115.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="164.0,31.0 309.5,115.0 236.7,157.0 91.3,73.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="164.0,31.0 309.5,115.0 236.7,157.0 91.3,73.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="164.0,66.0 309.5,150.0 309.5,115.0 164.0,31.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="164.0,66.0 309.5,150.0 309.5,115.0 164.0,31.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="164.0,143.0 173.1,148.2 173.1,71.2 164.0,66.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="300.4,221.8 309.5,227.0 309.5,150.0 300.4,144.8" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="309.5,227.0 300.4,232.2 300.4,155.2 309.5,150.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="154.0" y1="143.0" x2="329.5" y2="227.0" stroke="#ddd8cf" stroke-width="1.5"/>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">48" × 24" × 32"</text>
+<text x="318" y="234" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">48" L</text>
+<text x="247" y="211" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">24" W</text>
+<text x="80" y="112" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif" text-anchor="middle">32" H</text>
 </svg>`
   },
 
@@ -282,40 +194,22 @@ const planters = [
       'Level the bed on the ground before filling with soil.',
     ],
     tip: '<strong>Tip:</strong> Line the inside with landscape fabric before filling — it keeps soil in while letting excess water drain out.',
-    svg: `<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
-  <!-- Right face -->
-  <polygon points="222,170 247,145 247,181 222,206" ${S.right}/>
-  <!-- Top face -->
-  <polygon points="78,170 222,170 247,145 103,145" ${S.top}/>
-  <!-- Front face (lower board) -->
-  <rect x="78" y="187" width="144" height="19" ${S.front}/>
-  <!-- Front face (upper board) -->
-  <rect x="78" y="170" width="144" height="17" ${S.front}/>
-  <!-- Board seam line -->
-  <line x1="78" y1="187" x2="222" y2="187" stroke="#2c2c2c" stroke-width="1.2"/>
-  <!-- Corner post front-left -->
-  <rect x="78" y="170" width="8" height="36" ${S.leg}/>
-  <!-- Corner post front-right -->
-  <rect x="214" y="170" width="8" height="36" ${S.leg}/>
-  <!-- Grain lines -->
-  <line x1="86" y1="178" x2="214" y2="178" ${S.grain}/>
-  <line x1="86" y1="195" x2="214" y2="195" ${S.grain}/>
-  <!-- Dim: length -->
-  <line x1="78" y1="218" x2="222" y2="218" ${S.dim}/>
-  <line x1="78" y1="213" x2="78" y2="223" ${S.tick}/>
-  <line x1="222" y1="213" x2="222" y2="223" ${S.tick}/>
-  <text x="150" y="233" text-anchor="middle" ${S.label}>48"</text>
-  <!-- Dim: height -->
-  <line x1="62" y1="170" x2="62" y2="206" ${S.dim}/>
-  <line x1="57" y1="170" x2="67" y2="170" ${S.tick}/>
-  <line x1="57" y1="206" x2="67" y2="206" ${S.tick}/>
-  <text x="42" y="192" text-anchor="middle" ${S.label}>11"</text>
-  <!-- Depth label -->
-  <text x="252" y="158" ${S.note}>24" wide</text>
-  <!-- Board count note -->
-  <text x="150" y="163" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="-apple-system,sans-serif">2× 2×6 stacked</text>
-  <!-- Title -->
-  <text x="200" y="22" text-anchor="middle" ${S.title}>48" × 24" × 11"</text>
+    svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
+<polygon points="324.3,196.0 241.1,244.0 241.1,200.0 324.3,152.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="324.3,196.0 241.1,244.0 241.1,200.0 324.3,152.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="158.0,56.0 324.3,152.0 241.1,200.0 74.9,104.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="158.0,56.0 324.3,152.0 241.1,200.0 74.9,104.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="158.0,100.0 324.3,196.0 324.3,152.0 158.0,56.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="158.0,100.0 324.3,196.0 324.3,152.0 158.0,56.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<line x1="158.0" y1="78.0" x2="324.3" y2="174.0" stroke="#2A1800" stroke-width="1.2" opacity="0.5"/>
+<line x1="324.3" y1="174.0" x2="241.1" y2="222.0" stroke="#2A1800" stroke-width="1.2" opacity="0.5"/>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">48" × 24" × 11"</text>
+<line x1="158.0" y1="230" x2="324.3" y2="230" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
+<line x1="158.0" y1="225" x2="158.0" y2="235" stroke="#9ca3af" stroke-width="1.2"/>
+<line x1="324.3" y1="225" x2="324.3" y2="235" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="241.2" y="248" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">48"</text>
+<text x="250" y="228" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">24" W</text>
+<text x="138" y="83" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif" text-anchor="middle">11" H</text>
 </svg>`
   },
 
@@ -359,49 +253,28 @@ const planters = [
       'Sand all surfaces. Apply exterior stain or sealer to all faces, especially end grain.',
     ],
     tip: '<strong>Tip:</strong> Build both boxes separately, then join them at the end. This makes it much easier to keep each box square during assembly.',
-    svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lower box: right face -->
-  <polygon points="204,212 223,193 223,248 204,267" ${S.right}/>
-  <!-- Lower box: top face -->
-  <polygon points="60,212 204,212 223,193 79,193" ${S.top}/>
-  <!-- Lower box: front face -->
-  <rect x="60" y="212" width="144" height="55" ${S.front}/>
-  <!-- Lower grain -->
-  <line x1="60" y1="230" x2="204" y2="230" ${S.grain}/>
-  <line x1="60" y1="248" x2="204" y2="248" ${S.grain}/>
-  <!-- Upper box: right face -->
-  <polygon points="168,140 181,127 181,212 168,225" ${S.right}/>
-  <!-- Upper box: top face -->
-  <polygon points="96,140 168,140 181,127 109,127" ${S.top}/>
-  <!-- Upper box: front face -->
-  <rect x="96" y="140" width="72" height="72" ${S.front}/>
-  <!-- Upper grain -->
-  <line x1="96" y1="156" x2="168" y2="156" ${S.grain}/>
-  <line x1="96" y1="172" x2="168" y2="172" ${S.grain}/>
-  <line x1="96" y1="188" x2="168" y2="188" ${S.grain}/>
-  <line x1="96" y1="204" x2="168" y2="204" ${S.grain}/>
-  <!-- Dim: lower length -->
-  <line x1="60" y1="278" x2="204" y2="278" ${S.dim}/>
-  <line x1="60" y1="273" x2="60" y2="283" ${S.tick}/>
-  <line x1="204" y1="273" x2="204" y2="283" ${S.tick}/>
-  <text x="132" y="291" text-anchor="middle" ${S.label}>48" lower</text>
-  <!-- Dim: upper length -->
-  <line x1="96" y1="115" x2="168" y2="115" ${S.dim}/>
-  <line x1="96" y1="110" x2="96" y2="120" ${S.tick}/>
-  <line x1="168" y1="110" x2="168" y2="120" ${S.tick}/>
-  <text x="132" y="108" text-anchor="middle" ${S.label}>24" upper</text>
-  <!-- Dim: upper height -->
-  <line x1="81" y1="140" x2="81" y2="212" ${S.dim}/>
-  <line x1="76" y1="140" x2="86" y2="140" ${S.tick}/>
-  <line x1="76" y1="212" x2="86" y2="212" ${S.tick}/>
-  <text x="61" y="180" text-anchor="middle" ${S.label}>24"</text>
-  <!-- Dim: lower height -->
-  <line x1="44" y1="212" x2="44" y2="267" ${S.dim}/>
-  <line x1="39" y1="212" x2="49" y2="212" ${S.tick}/>
-  <line x1="39" y1="267" x2="49" y2="267" ${S.tick}/>
-  <text x="27" y="243" text-anchor="middle" ${S.label}>12"</text>
-  <!-- Title -->
-  <text x="200" y="22" text-anchor="middle" ${S.title}>Tiered — 48" lower / 24" upper</text>
+    svg: `<svg viewBox="0 0 400 295" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
+<polygon points="300.5,239.0 245.9,270.5 245.9,228.5 300.5,197.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="300.5,239.0 245.9,270.5 245.9,228.5 300.5,197.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="155.0,113.0 300.5,197.0 245.9,228.5 100.4,144.5" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="155.0,113.0 300.5,197.0 245.9,228.5 100.4,144.5" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="155.0,155.0 300.5,239.0 300.5,197.0 155.0,113.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="155.0,155.0 300.5,239.0 300.5,197.0 155.0,113.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="245.9,186.5 209.6,207.5 209.6,123.5 245.9,102.5" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="245.9,186.5 209.6,207.5 209.6,123.5 245.9,102.5" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="173.2,60.5 245.9,102.5 209.6,123.5 136.8,81.5" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="173.2,60.5 245.9,102.5 209.6,123.5 136.8,81.5" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="173.2,144.5 245.9,186.5 245.9,102.5 173.2,60.5" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="173.2,144.5 245.9,186.5 245.9,102.5 173.2,60.5" fill="url(#h)" stroke="none" opacity="0.6"/>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">48" lower / 24" upper</text>
+<line x1="155.0" y1="258" x2="300.5" y2="258" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
+<line x1="155.0" y1="253" x2="155.0" y2="263" stroke="#9ca3af" stroke-width="1.2"/>
+<line x1="300.5" y1="253" x2="300.5" y2="263" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="227.8" y="275" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">48" lower</text>
+<line x1="173.2" y1="168" x2="245.9" y2="210" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
+<line x1="173.2" y1="163" x2="173.2" y2="173" stroke="#9ca3af" stroke-width="1.2"/>
+<line x1="245.9" y1="205" x2="245.9" y2="215" stroke="#9ca3af" stroke-width="1.2"/>
+<text x="209.5" y="228" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">24" upper</text>
 </svg>`
   },
 
@@ -445,57 +318,28 @@ const planters = [
       'Sand and finish with two coats of exterior stain or sealer.',
     ],
     tip: '<strong>Tip:</strong> For extra strength, angle-drill screws into each slat intersection instead of relying on nails alone.',
-    svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg">
-  <!-- Box: right face -->
-  <polygon points="180,195 191,184 191,240 180,251" ${S.right}/>
-  <!-- Box: top face -->
-  <polygon points="120,195 180,195 191,184 131,184" ${S.top}/>
-  <!-- Box: front face -->
-  <rect x="120" y="195" width="60" height="56" ${S.front}/>
-  <!-- Box grain -->
-  <line x1="120" y1="209" x2="180" y2="209" ${S.grain}/>
-  <line x1="120" y1="224" x2="180" y2="224" ${S.grain}/>
-  <line x1="120" y1="239" x2="180" y2="239" ${S.grain}/>
-  <!-- Left trellis post (front) full height: y=60 to y=251 -->
-  <rect x="118" y="60" width="5" height="191" fill="#e8e3d8" stroke="#2c2c2c" stroke-width="1.5"/>
-  <!-- Right trellis post (front): y=60 to y=251 -->
-  <rect x="177" y="60" width="5" height="191" fill="#e8e3d8" stroke="#2c2c2c" stroke-width="1.5"/>
-  <!-- Back-left post (depth offset x+11, y-11): x=129, y=49 -->
-  <rect x="129" y="49" width="4" height="180" fill="#ccc8bc" stroke="#2c2c2c" stroke-width="0.8" opacity="0.7"/>
-  <!-- Back-right post: x=188 -->
-  <rect x="188" y="49" width="4" height="174" fill="#ccc8bc" stroke="#2c2c2c" stroke-width="0.8" opacity="0.5"/>
-  <!-- Horizontal trellis slats: 6 bars from y=80 to y=180 -->
-  <line x1="123" y1="80"  x2="182" y2="80"  stroke="#b8b2a8" stroke-width="3" stroke-linecap="round"/>
-  <line x1="123" y1="100" x2="182" y2="100" stroke="#b8b2a8" stroke-width="3" stroke-linecap="round"/>
-  <line x1="123" y1="120" x2="182" y2="120" stroke="#b8b2a8" stroke-width="3" stroke-linecap="round"/>
-  <line x1="123" y1="140" x2="182" y2="140" stroke="#b8b2a8" stroke-width="3" stroke-linecap="round"/>
-  <line x1="123" y1="160" x2="182" y2="160" stroke="#b8b2a8" stroke-width="3" stroke-linecap="round"/>
-  <line x1="123" y1="180" x2="182" y2="180" stroke="#b8b2a8" stroke-width="3" stroke-linecap="round"/>
-  <!-- Vertical trellis slats: 3 bars -->
-  <line x1="137" y1="78" x2="137" y2="182" stroke="#c8c2b6" stroke-width="2" stroke-linecap="round"/>
-  <line x1="152" y1="78" x2="152" y2="182" stroke="#c8c2b6" stroke-width="2" stroke-linecap="round"/>
-  <line x1="167" y1="78" x2="167" y2="182" stroke="#c8c2b6" stroke-width="2" stroke-linecap="round"/>
-  <!-- Dim: box height -->
-  <line x1="103" y1="195" x2="103" y2="251" ${S.dim}/>
-  <line x1="98" y1="195" x2="108" y2="195" ${S.tick}/>
-  <line x1="98" y1="251" x2="108" y2="251" ${S.tick}/>
-  <text x="83" y="227" text-anchor="middle" ${S.label}>18"</text>
-  <!-- Dim: trellis height -->
-  <line x1="103" y1="60" x2="103" y2="195" ${S.dim}/>
-  <line x1="98" y1="60" x2="108" y2="60" ${S.tick}/>
-  <text x="83" y="135" text-anchor="middle" ${S.label}>48"</text>
-  <!-- Dim: width -->
-  <line x1="120" y1="264" x2="180" y2="264" ${S.dim}/>
-  <line x1="120" y1="259" x2="120" y2="269" ${S.tick}/>
-  <line x1="180" y1="259" x2="180" y2="269" ${S.tick}/>
-  <text x="150" y="278" text-anchor="middle" ${S.label}>24"</text>
-  <!-- Depth label -->
-  <text x="196" y="192" ${S.note}>12" deep</text>
-  <!-- Trellis label -->
-  <text x="275" y="128" ${S.note}>trellis</text>
-  <text x="275" y="140" ${S.note}>grid</text>
-  <!-- Title -->
-  <text x="200" y="22" text-anchor="middle" ${S.title}>24" × 12" box + 48" trellis</text>
+    svg: `<svg viewBox="0 0 400 285" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
+<polygon points="158.0,223.0 152.8,226.0 152.8,28.0 158.0,25.0" fill="#B09000" stroke="#2A1800" stroke-width="0.8" opacity="0.4"/>
+<polygon points="246.4,244.0 241.2,247.0 241.2,49.0 246.4,46.0" fill="#B09000" stroke="#2A1800" stroke-width="0.8" opacity="0.4"/>
+<line x1="184.0" y1="136.0" x2="246.4" y2="172.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="184.0" y1="115.0" x2="246.4" y2="151.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="184.0" y1="94.0" x2="246.4" y2="130.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="184.0" y1="73.0" x2="246.4" y2="109.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="184.0" y1="52.0" x2="246.4" y2="88.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="184.0" y1="31.0" x2="246.4" y2="67.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="204.8" y1="166.0" x2="204.8" y2="22.0" stroke="#D4B000" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="225.6" y1="178.0" x2="225.6" y2="34.0" stroke="#D4B000" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="246.4,244.0 215.2,262.0 215.2,208.0 246.4,190.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="246.4,244.0 215.2,262.0 215.2,208.0 246.4,190.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="184.0,154.0 246.4,190.0 215.2,208.0 152.8,172.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="184.0,154.0 246.4,190.0 215.2,208.0 152.8,172.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="184.0,208.0 246.4,244.0 246.4,190.0 184.0,154.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="184.0,208.0 246.4,244.0 246.4,190.0 184.0,154.0" fill="url(#h)" stroke="none" opacity="0.6"/>
+<polygon points="184.0,208.0 189.2,211.0 189.2,13.0 184.0,10.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="241.2,241.0 246.4,244.0 246.4,46.0 241.2,43.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="246.4,244.0 241.2,247.0 241.2,49.0 246.4,46.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">24" box + 48" trellis</text>
+<text x="154" y="270" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">24" W × 12" deep</text>
 </svg>`
   },
 
@@ -511,7 +355,7 @@ function renderCatalog() {
   const el = document.getElementById('catalog');
   el.innerHTML = planters.map(p => `
     <button class="card" onclick="showDetail('${p.id}')" aria-label="View ${p.name}">
-      <div class="card-drawing">${p.svg}</div>
+      <div class="card-drawing">${p.thumbSvg || p.svg}</div>
       <div class="card-body">
         ${skillBadge(p.skill)}
         <div class="card-name">${p.name}</div>
