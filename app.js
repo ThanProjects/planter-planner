@@ -37,6 +37,8 @@ const planters = [
       'Sand all surfaces and apply two coats of exterior stain or sealer.',
     ],
     tip: '<strong>Tip:</strong> Cedar is naturally rot-resistant and smells great. Redwood or pressure-treated pine also work well outdoors.',
+    sourceUrl: 'https://www.yellawood.com/diy-projects/window-planter-box/',
+    sourceName: 'YellaWood — DIY Window Planter Box',
     svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
 <polygon points="314.1,216.0 272.5,240.0 272.5,192.0 314.1,168.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
 <polygon points="314.1,216.0 272.5,240.0 272.5,192.0 314.1,168.0" fill="url(#h)" stroke="none" opacity="0.6"/>
@@ -97,6 +99,8 @@ const planters = [
       'Sand smooth and apply two coats of exterior stain & sealer.',
     ],
     tip: '<strong>Tip:</strong> Measure and cut the trim boards (F, G, H) after the box is assembled — natural lumber varies slightly and this ensures a perfectly flush fit.',
+    sourceUrl: 'https://www.yellawood.com/diy-projects/planter-box/',
+    sourceName: 'YellaWood — Classic Planter Box Plans',
     thumbSvg: `<img src="images/classic-planter-thumb.png" style="width:100%;height:100%;object-fit:contain" alt="Classic Planter Box isometric view">`,
     svg: `<img src="images/classic-planter-detail.png" style="width:100%;height:auto;display:block;border-radius:8px" alt="Classic Planter Box exploded view with labeled parts">`,
   },
@@ -140,6 +144,8 @@ const planters = [
       'Sand all surfaces and apply exterior stain or sealer, paying extra attention to end grain.',
     ],
     tip: '<strong>Tip:</strong> Cut legs slightly long, then trim all four to the same length after assembly to keep the planter perfectly level.',
+    sourceUrl: 'https://freewoodworkingplan.com/elevated-planter-box-pdf/',
+    sourceName: 'FreeWoodworkingPlan — Elevated Planter Box',
     svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
 <polygon points="100.3,179.8 91.3,185.0 91.3,108.0 100.3,102.8" fill="#B09000" stroke="#2A1800" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
 <polygon points="245.8,263.8 236.7,269.0 236.7,192.0 245.8,186.8" fill="#B09000" stroke="#2A1800" stroke-width="1.2" stroke-linejoin="round"/>
@@ -194,6 +200,8 @@ const planters = [
       'Level the bed on the ground before filling with soil.',
     ],
     tip: '<strong>Tip:</strong> Line the inside with landscape fabric before filling — it keeps soil in while letting excess water drain out.',
+    sourceUrl: 'https://www.yellawood.com/diy-projects/raised-garden-bed/',
+    sourceName: 'YellaWood — DIY Raised Garden Bed',
     svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
 <polygon points="324.3,196.0 241.1,244.0 241.1,200.0 324.3,152.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
 <polygon points="324.3,196.0 241.1,244.0 241.1,200.0 324.3,152.0" fill="url(#h)" stroke="none" opacity="0.6"/>
@@ -253,6 +261,8 @@ const planters = [
       'Sand all surfaces. Apply exterior stain or sealer to all faces, especially end grain.',
     ],
     tip: '<strong>Tip:</strong> Build both boxes separately, then join them at the end. This makes it much easier to keep each box square during assembly.',
+    sourceUrl: 'https://craft.camp/p/garden-planter-plans/',
+    sourceName: 'CraftCamp — Raised Garden Planter with Trellis Plans',
     svg: `<svg viewBox="0 0 400 295" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
 <polygon points="300.5,239.0 245.9,270.5 245.9,228.5 300.5,197.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
 <polygon points="300.5,239.0 245.9,270.5 245.9,228.5 300.5,197.0" fill="url(#h)" stroke="none" opacity="0.6"/>
@@ -318,6 +328,8 @@ const planters = [
       'Sand and finish with two coats of exterior stain or sealer.',
     ],
     tip: '<strong>Tip:</strong> For extra strength, angle-drill screws into each slat intersection instead of relying on nails alone.',
+    sourceUrl: 'https://www.realcedar.com/outdoor/free-diy-project-plans/planter-with-trellis',
+    sourceName: 'Real Cedar — Planter with Trellis Plans',
     svg: `<svg viewBox="0 0 400 285" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
 <polygon points="158.0,223.0 152.8,226.0 152.8,28.0 158.0,25.0" fill="#B09000" stroke="#2A1800" stroke-width="0.8" opacity="0.4"/>
 <polygon points="246.4,244.0 241.2,247.0 241.2,49.0 246.4,46.0" fill="#B09000" stroke="#2A1800" stroke-width="0.8" opacity="0.4"/>
@@ -448,6 +460,16 @@ function renderDetail(p) {
       </ol>
       ${p.tip ? `<div class="tip">${p.tip}</div>` : ''}
     </div>
+
+    ${p.sourceUrl ? `
+    <div class="section source-section">
+      <div class="section-title">Original Plans</div>
+      <a href="${p.sourceUrl}" target="_blank" rel="noopener" class="source-link">
+        <span class="source-link-icon">📐</span>
+        <span>${p.sourceName}</span>
+        <span class="source-link-arrow">↗</span>
+      </a>
+    </div>` : ''}
 
     <div style="height:24px"></div>
   `;
