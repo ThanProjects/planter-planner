@@ -6,12 +6,12 @@ A mobile-first web app with a catalog of 6 DIY wood planter designs. Each design
 
 | Design | Skill | Est. Cost | Build Time |
 |---|---|---|---|
-| Window Box | Beginner | $30–$45 | 1–2 hrs |
-| Classic Planter Box | Beginner | $55–$75 | 2–5 hrs |
-| Elevated Planter Box | Beginner | $65–$90 | 2–4 hrs |
-| Raised Garden Bed | Beginner | $45–$65 | 1–2 hrs |
-| Tiered Planter | Intermediate | $85–$120 | 3–5 hrs |
-| Trellis Planter | Intermediate | $70–$95 | 3–5 hrs |
+| Stacked Cedar Planter | Beginner | $60–$85 | 2–4 hrs |
+| Legged Planter Box | Beginner | $45–$65 | 4–5 hrs |
+| Modular Patio Planter | Beginner | $30–$45 | 1–2 hrs |
+| Cedar Wall Planter | Beginner | $30–$45 | 2–3 hrs |
+| Tall Slatted Planter | Beginner | $45–$60 | 2–3 hrs |
+| Tall Privacy Planter | Intermediate | $90–$120 | 4–6 hrs |
 
 ## Files
 

@@ -1,75 +1,85 @@
 /* ── Planter data ── */
 const planters = [
 
-  /* 1 ─ Window Box ──────────────────────────────────────── */
+  /* 1 ─ Stacked Cedar Planter ───────────────────────────── */
   {
-    id: 'window-box',
-    name: 'Window Box',
+    id: 'stacked-cedar-planter',
+    name: 'Stacked Cedar Planter',
     skill: 'beginner',
-    buildTime: '1–2 hrs',
-    priceMin: 30,
-    priceMax: 45,
-    description: 'A slim, versatile trough for herbs, flowers, or trailing plants. Sits on a railing, windowsill, or fence top.',
-    dimensions: '36"L × 8"W × 8"H',
+    buildTime: '2–4 hrs',
+    priceMin: 60,
+    priceMax: 85,
+    description: 'A boxy stacked-board planter with a mitered 2×4 cap and short corner legs. Built entirely from 2×6 and 2×4 cedar.',
+    dimensions: '~26" sq top × ~20" tall',
     lumber: [
-      { item: '1×8×8 ft cedar', qty: '2 boards' },
-      { item: '1×2×4 ft cedar (cleats)', qty: '1 board' },
+      { item: '2×6×8 ft cedar (walls & floor)', qty: '5 boards' },
+      { item: '2×4×8 ft cedar (frame, legs & cap)', qty: '3 boards' },
     ],
     supplies: [
-      { item: '1½" exterior wood screws', qty: '1 lb box' },
-      { item: 'Waterproof exterior glue', qty: '1 bottle' },
+      { item: '3" exterior deck screws', qty: '1 lb box' },
+      { item: '2¾" galvanized finish nails', qty: '½ lb box' },
       { item: 'Exterior stain or sealer', qty: '1 qt' },
     ],
-    tools: ['Circular saw', 'Drill/driver', 'Tape measure', 'Clamps', '80-grit sandpaper'],
+    tools: ['Circular saw', 'Miter saw', 'Table saw (for ripping legs)', 'Drill/driver', 'Tape measure', 'Clamps', 'Sandpaper'],
     cutList: [
-      { label: 'A', desc: 'Front & Back boards (1×8)', size: '36"', qty: 2 },
-      { label: 'B', desc: 'End boards (1×8)', size: '6½"', qty: 2 },
-      { label: 'C', desc: 'Bottom board (1×8)', size: '34½"', qty: 1 },
-      { label: 'D', desc: 'Cleats (1×2)', size: '6½"', qty: 4 },
+      { label: 'A', desc: 'Frame pieces, long (2×4)', size: '1\'10"', qty: 4 },
+      { label: 'B', desc: 'Frame pieces, short (2×4)', size: '1\'7"', qty: 4 },
+      { label: 'C', desc: 'Floor boards (2×6)', size: '1\'10"', qty: 4 },
+      { label: 'D', desc: 'Wall boards (2×6)', size: '1\'6"', qty: 16 },
+      { label: 'E', desc: 'Legs, ripped (2×4)', size: '1\'8"', qty: 4 },
+      { label: 'F', desc: 'Cap trim, mitered 45° (2×4)', size: '2\'2"', qty: 4 },
     ],
     steps: [
-      'Cut all boards to length per the cut list.',
-      'Attach two cleats (D) to the inside face of each end board (B), flush with the bottom edge.',
-      'Glue and screw the front (A) to both end boards (B), keeping top edges flush.',
-      'Repeat with the back board (A).',
-      'Drill three ⅜" drainage holes evenly spaced along the bottom board (C).',
-      'Drop the bottom (C) onto the cleats and screw in place from the sides.',
+      'Build the base frame from the long and short 2×4 pieces (A, B), forming a rectangle.',
+      'Rip four legs (E) from a 2×4 and attach one inside each corner of the frame, standing vertically.',
+      'Lay the floor boards (C) across the frame with small gaps for drainage, and nail in place.',
+      'Stack and screw the 2×6 wall boards (D) around all four sides — four courses per side — attaching to the legs and frame for rigidity.',
+      'Miter the four cap trim pieces (F) at 45° and attach them around the top edge, overhanging slightly.',
       'Sand all surfaces and apply two coats of exterior stain or sealer.',
     ],
-    tip: '<strong>Tip:</strong> Cedar is naturally rot-resistant and smells great. Redwood or pressure-treated pine also work well outdoors.',
-    sourceUrl: 'https://www.yellawood.com/diy-projects/window-planter-box/',
-    sourceName: 'YellaWood — DIY Window Planter Box',
-    svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
-<polygon points="314.1,216.0 272.5,240.0 272.5,192.0 314.1,168.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="314.1,216.0 272.5,240.0 272.5,192.0 314.1,168.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="127.0,60.0 314.1,168.0 272.5,192.0 85.4,84.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="127.0,60.0 314.1,168.0 272.5,192.0 85.4,84.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="127.0,108.0 314.1,216.0 314.1,168.0 127.0,60.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="127.0,108.0 314.1,216.0 314.1,168.0 127.0,60.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">36" × 8" × 8"</text>
-<line x1="127.0" y1="245" x2="314.1" y2="245" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
-<line x1="127.0" y1="240" x2="127.0" y2="250" stroke="#9ca3af" stroke-width="1.2"/>
-<line x1="314.1" y1="240" x2="314.1" y2="250" stroke="#9ca3af" stroke-width="1.2"/>
-<text x="220.5" y="262" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">36"</text>
-<text x="323" y="183" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">8" deep</text>
-<text x="100" y="88" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif" text-anchor="middle">8" H</text>
+    tip: '<strong>Tip:</strong> Stagger the screw pattern on each stacked wall board so consecutive courses don\'t split the same grain line.',
+    sourceUrl: 'https://www.construct101.com/planter-box-plans/',
+    sourceName: 'Construct101 — Planter Box Plans',
+    svg: `<svg viewBox="0 0 400 332" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000022" stroke-width="1.3"/></pattern></defs>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">~26" sq × ~20" H</text>
+<polygon points="200.0,52.0 335.1,130.0 200.0,208.0 64.9,130.0" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,52.0 335.1,130.0 200.0,208.0 64.9,130.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,160.0 335.1,238.0 335.1,130.0 200.0,52.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,160.0 335.1,238.0 335.1,130.0 200.0,52.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="335.1,238.0 200.0,316.0 200.0,208.0 335.1,130.0" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="335.1,238.0 200.0,316.0 200.0,208.0 335.1,130.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<line x1="200.0" y1="133.0" x2="335.1" y2="211.0" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="335.1" y1="211.0" x2="200.0" y2="289.0" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="200.0" y1="106.0" x2="335.1" y2="184.0" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="335.1" y1="184.0" x2="200.0" y2="262.0" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="200.0" y1="79.0" x2="335.1" y2="157.0" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="335.1" y1="157.0" x2="200.0" y2="235.0" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<polygon points="200.0,31.0 350.7,118.0 200.0,205.0 49.3,118.0" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,31.0 350.7,118.0 200.0,205.0 49.3,118.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,43.0 350.7,130.0 350.7,118.0 200.0,31.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,43.0 350.7,130.0 350.7,118.0 200.0,31.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="350.7,130.0 200.0,217.0 200.0,205.0 350.7,118.0" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="350.7,130.0 200.0,217.0 200.0,205.0 350.7,118.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,299.2 209.4,304.6 200.0,310.0 190.6,304.6" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,311.2 209.4,316.6 209.4,304.6 200.0,299.2" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="209.4,316.6 200.0,322.0 200.0,310.0 209.4,304.6" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
 </svg>`
   },
 
-  /* 2 ─ Classic Planter Box (from PDF) ─────────────────── */
+  /* 2 ─ Legged Planter Box ──────────────────────────────── */
   {
-    id: 'classic-planter',
-    name: 'Classic Planter Box',
+    id: 'legged-planter-box',
+    name: 'Legged Planter Box',
     skill: 'beginner',
-    buildTime: '2–5 hrs',
-    priceMin: 55,
-    priceMax: 75,
-    description: 'A timeless design with corner post legs and decorative trim. Perfect for a tomato plant, herbs, or small shrubs.',
-    dimensions: '22½"L × 18"W × 24"H',
+    buildTime: '4–5 hrs',
+    priceMin: 45,
+    priceMax: 65,
+    description: 'A square 1×8 box raised on sturdy 2×4 legs, dressed up with 1×4 corner trim and a drainage gap at the base.',
+    dimensions: '~22" sq box on 8" legs (~28" tall overall)',
     lumber: [
-      { item: '1×8×8 ft', qty: '3 boards' },
-      { item: '1×4×12 ft', qty: '2 boards' },
-      { item: '2×4×8 ft (rip for legs)', qty: '1 board' },
+      { item: '1×8×8 ft pressure-treated pine (sides & bottom)', qty: '3 boards' },
+      { item: '2×4×8 ft pressure-treated pine (legs)', qty: '1 board' },
+      { item: '1×4×12 ft pressure-treated pine (corner trim)', qty: '2 boards' },
     ],
     supplies: [
       { item: '1½" exterior wood screws', qty: '1 lb box' },
@@ -77,281 +87,345 @@ const planters = [
       { item: 'Waterproof exterior glue', qty: '1 bottle' },
       { item: 'Exterior stain & sealer', qty: '1 qt' },
     ],
-    tools: ['Miter saw (or circular saw)', 'Table saw', 'Drill/driver', 'Hammer', 'Nail set', 'Sandpaper'],
+    tools: ['Circular saw', 'Table saw (for ripping legs)', 'Drill/driver', 'Hammer', 'Nail set', 'Sandpaper'],
     cutList: [
-      { label: 'A', desc: 'Short sides (1×8)', size: '18"', qty: 4 },
-      { label: 'B', desc: 'Long sides (1×8)', size: '22½"', qty: 4 },
-      { label: 'C', desc: 'Legs (1½×1½ ripped from 2×4)', size: '24"', qty: 4 },
-      { label: 'D', desc: 'Cleats (1×2)', size: '18"', qty: 2 },
-      { label: 'E', desc: 'Bottom boards (1×8)', size: '18"', qty: 3 },
-      { label: 'F', desc: 'Short trim (1×4)', size: '15½"', qty: 4 },
-      { label: 'G', desc: 'Long trim (1×4)', size: '25½"', qty: 2 },
-      { label: 'H', desc: 'End trim (1×4)', size: '19½"', qty: 2 },
+      { label: 'A', desc: 'Side panels (1×8)', size: '20½"', qty: 8 },
+      { label: 'B', desc: 'Legs, ripped (2×4 → 2×2)', size: '28"', qty: 4 },
+      { label: 'C', desc: 'Bottom cleats (1×2, ripped)', size: '19"', qty: 2 },
+      { label: 'D', desc: 'Bottom boards (1×8)', size: '19"', qty: 3 },
+      { label: 'E', desc: 'Corner trim (1×4)', size: 'cut to fit', qty: 8 },
     ],
     steps: [
-      'Rip the 2×4 in half lengthwise on a table saw to create four 1½"×1½" legs (C).',
-      'Attach short side panels (A×2 each side) to the legs (C) with glue and screws, keeping top edges flush.',
-      'Glue and screw cleats (D) to the inside of each short side, bottom-edge flush.',
-      'Attach long side panels (B) to the assembled short sides, forming the box.',
-      'Notch three bottom boards (E) to fit around legs and rest on cleats. Screw in place.',
-      'After assembly, measure and cut trim boards (F, G, H) for exact fit. Attach with glue and finish nails.',
-      'Drill ⅜" drainage holes through the bottom boards.',
-      'Sand smooth and apply two coats of exterior stain & sealer.',
+      'Rip the 2×4 into four 2"×2" legs (B), each 28" long.',
+      'Attach two side panels (A) to each pair of legs, top edges flush, forming the four walls.',
+      'Glue and screw the bottom cleats (C) to the inside of the box, flush with the bottom edge, to support the floor.',
+      'Drill ⅜" drainage holes in the bottom boards (D), then drop them onto the cleats and screw in place.',
+      'Measure and cut the 1×4 corner trim (E) for an exact flush fit, then attach with glue and finish nails.',
+      'Sand all surfaces and apply two coats of exterior stain & sealer.',
     ],
-    tip: '<strong>Tip:</strong> Measure and cut the trim boards (F, G, H) after the box is assembled — natural lumber varies slightly and this ensures a perfectly flush fit.',
+    tip: '<strong>Tip:</strong> Cut the corner trim (E) after the box is assembled — natural lumber varies slightly and this guarantees a flush fit at every corner.',
     sourceUrl: 'https://www.yellawood.com/diy-projects/planter-box/',
-    sourceName: 'YellaWood — Classic Planter Box Plans',
-    thumbSvg: `<img src="images/classic-planter-thumb.png" style="width:100%;height:100%;object-fit:contain" alt="Classic Planter Box isometric view">`,
-    svg: `<img src="images/classic-planter-detail.png" style="width:100%;height:auto;display:block;border-radius:8px" alt="Classic Planter Box exploded view with labeled parts">`,
-  },
-
-  /* 3 ─ Elevated Planter Box ────────────────────────────── */
-  {
-    id: 'elevated-planter',
-    name: 'Elevated Planter Box',
-    skill: 'beginner',
-    buildTime: '2–4 hrs',
-    priceMin: 65,
-    priceMax: 90,
-    description: 'A raised planter on four sturdy legs — easier on your back and perfect for a deck or patio. Great for vegetables.',
-    dimensions: '48"L × 24"W × 32"H total',
-    lumber: [
-      { item: '2×4×8 ft (legs & frame)', qty: '4 boards' },
-      { item: '2×6×8 ft (box sides)', qty: '2 boards' },
-      { item: '1×6×8 ft (box bottom)', qty: '2 boards' },
-    ],
-    supplies: [
-      { item: '2½" exterior screws', qty: '1 lb box' },
-      { item: '1⅝" exterior screws', qty: '½ lb box' },
-      { item: 'Waterproof exterior glue', qty: '1 bottle' },
-      { item: 'Exterior stain or sealer', qty: '1 qt' },
-    ],
-    tools: ['Circular saw', 'Drill/driver', 'Speed square', 'Tape measure', 'Clamps', 'Sandpaper'],
-    cutList: [
-      { label: 'A', desc: 'Legs (2×4)', size: '22"', qty: 4 },
-      { label: 'B', desc: 'Long side boards (2×6)', size: '48"', qty: 2 },
-      { label: 'C', desc: 'Short end boards (2×6)', size: '21"', qty: 2 },
-      { label: 'D', desc: 'Long top rails (2×4)', size: '48"', qty: 2 },
-      { label: 'E', desc: 'Short top rails (2×4)', size: '21"', qty: 2 },
-      { label: 'F', desc: 'Bottom boards (1×6)', size: '45"', qty: 3 },
-    ],
-    steps: [
-      'Build two end frames: screw a short end board (C) and short top rail (E) between two legs (A).',
-      'Connect the two end frames with long side boards (B) and long top rails (D).',
-      'Check for square — measure diagonals and adjust before the glue sets.',
-      'Lay bottom boards (F) inside the box, leaving small gaps for drainage. Screw in place.',
-      'Optionally drill additional ⅜" drainage holes through the bottom boards.',
-      'Sand all surfaces and apply exterior stain or sealer, paying extra attention to end grain.',
-    ],
-    tip: '<strong>Tip:</strong> Cut legs slightly long, then trim all four to the same length after assembly to keep the planter perfectly level.',
-    sourceUrl: 'https://freewoodworkingplan.com/elevated-planter-box-pdf/',
-    sourceName: 'FreeWoodworkingPlan — Elevated Planter Box',
-    svg: `<svg viewBox="0 0 400 290" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
-<polygon points="100.3,179.8 91.3,185.0 91.3,108.0 100.3,102.8" fill="#B09000" stroke="#2A1800" stroke-width="1" stroke-linejoin="round" opacity="0.5"/>
-<polygon points="245.8,263.8 236.7,269.0 236.7,192.0 245.8,186.8" fill="#B09000" stroke="#2A1800" stroke-width="1.2" stroke-linejoin="round"/>
-<polygon points="309.5,150.0 236.7,192.0 236.7,157.0 309.5,115.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="309.5,150.0 236.7,192.0 236.7,157.0 309.5,115.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="164.0,31.0 309.5,115.0 236.7,157.0 91.3,73.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="164.0,31.0 309.5,115.0 236.7,157.0 91.3,73.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="164.0,66.0 309.5,150.0 309.5,115.0 164.0,31.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="164.0,66.0 309.5,150.0 309.5,115.0 164.0,31.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="164.0,143.0 173.1,148.2 173.1,71.2 164.0,66.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="300.4,221.8 309.5,227.0 309.5,150.0 300.4,144.8" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="309.5,227.0 300.4,232.2 300.4,155.2 309.5,150.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<line x1="154.0" y1="143.0" x2="329.5" y2="227.0" stroke="#ddd8cf" stroke-width="1.5"/>
-<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">48" × 24" × 32"</text>
-<text x="318" y="234" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">48" L</text>
-<text x="247" y="211" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">24" W</text>
-<text x="80" y="112" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif" text-anchor="middle">32" H</text>
+    sourceName: 'YellaWood — Planter Box Plans',
+    svg: `<svg viewBox="0 0 400 319" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000022" stroke-width="1.3"/></pattern></defs>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">1×8 box on 2×4 legs</text>
+<polygon points="200.0,141.0 207.1,145.1 200.0,149.2 192.9,145.1" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,229.0 207.1,233.1 207.1,145.1 200.0,141.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="207.1,233.1 200.0,237.2 200.0,149.2 207.1,145.1" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="303.6,202.4 310.8,206.5 303.6,210.6 296.5,206.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="303.6,290.4 310.8,294.5 310.8,206.5 303.6,202.4" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="310.8,294.5 303.6,298.6 303.6,210.6 310.8,206.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="96.4,202.4 103.5,206.5 96.4,210.6 89.2,206.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="96.4,290.4 103.5,294.5 103.5,206.5 96.4,202.4" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="103.5,294.5 96.4,298.6 96.4,210.6 103.5,206.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,253.0 207.1,257.1 200.0,261.2 192.9,257.1" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,341.0 207.1,345.1 207.1,257.1 200.0,253.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="207.1,345.1 200.0,349.2 200.0,261.2 207.1,257.1" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,31.0 304.8,91.5 200.0,152.0 95.2,91.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,31.0 304.8,91.5 200.0,152.0 95.2,91.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,141.0 304.8,201.5 304.8,91.5 200.0,31.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,141.0 304.8,201.5 304.8,91.5 200.0,31.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="304.8,201.5 200.0,262.0 200.0,152.0 304.8,91.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="304.8,201.5 200.0,262.0 200.0,152.0 304.8,91.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<line x1="200.0" y1="104.3" x2="304.8" y2="164.8" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="304.8" y1="164.8" x2="200.0" y2="225.3" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="200.0" y1="67.7" x2="304.8" y2="128.2" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="304.8" y1="128.2" x2="200.0" y2="188.7" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="303.6" y1="202.4" x2="303.6" y2="92.4" stroke="#4A3017" stroke-width="2" opacity="0.5"/>
+<line x1="207.1" y1="257.1" x2="207.1" y2="147.1" stroke="#4A3017" stroke-width="2" opacity="0.5"/>
 </svg>`
   },
 
-  /* 4 ─ Raised Garden Bed ───────────────────────────────── */
+  /* 3 ─ Modular Patio Planter ───────────────────────────── */
   {
-    id: 'raised-bed',
-    name: 'Raised Garden Bed',
+    id: 'modular-patio-planter',
+    name: 'Modular Patio Planter',
     skill: 'beginner',
     buildTime: '1–2 hrs',
+    priceMin: 30,
+    priceMax: 45,
+    description: 'A small, low cedar trough with three bottom runners for drainage and airflow. Stackable — build two and connect them for a taller planter.',
+    dimensions: '22½" L × 7" W × 8" H (two stacked 4" courses)',
+    lumber: [
+      { item: '6"×¾" cedar boards, 12 ft (rip into sides, ends, runners & connectors)', qty: '2 boards' },
+    ],
+    supplies: [
+      { item: '1¼" exterior screws', qty: '20' },
+      { item: 'Landscape fabric (24"×24")', qty: '1 piece' },
+    ],
+    tools: ['Circular saw or miter saw', 'Drill/driver', 'Staple gun', 'Tape measure', 'Square'],
+    cutList: [
+      { label: 'A', desc: 'Sides', size: '4" × 22½"', qty: 4 },
+      { label: 'B', desc: 'Ends', size: '4" × 7"', qty: 4 },
+      { label: 'C', desc: 'Bottom runners', size: '2" × 7"', qty: 3 },
+      { label: 'D', desc: 'Stacking connectors', size: '5½" × 7½"', qty: 2 },
+    ],
+    steps: [
+      'Cut all pieces to size (A–D) from the cedar boards.',
+      'Assemble the box: screw sides (A) to ends (B), using two screws per joint and a spacer block to keep everything square.',
+      'Line the inside of the box with landscape fabric, stapling it to the inner faces.',
+      'Attach three runners (C) to the bottom of the box, evenly spaced, for drainage and a finished look.',
+      'To stack a second box on top, attach the two connectors (D) about 1" below the top edge of the lower box, then set the upper box in place.',
+      'Fill with container soil and plant.',
+    ],
+    tip: '<strong>Tip:</strong> Each box is intentionally small and stackable — build several and arrange them at different heights for a modular patio garden.',
+    sourceUrl: 'https://www.anneofalltrades.com/blog/2020/5/7/easy-diy-planter-box-with-free-plans',
+    sourceName: 'Anne of All Trades — Easy DIY Planter Box',
+    svg: `<svg viewBox="0 0 400 267" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000022" stroke-width="1.3"/></pattern></defs>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">22½" L × 7" W</text>
+<polygon points="139.6,165.5 151.3,172.2 104.5,199.2 92.8,192.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="139.6,183.5 151.3,190.2 151.3,172.2 139.6,165.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="151.3,190.2 104.5,217.2 104.5,199.2 151.3,172.2" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="217.5,210.5 229.2,217.2 182.5,244.2 170.8,237.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="217.5,228.5 229.2,235.2 229.2,217.2 217.5,210.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="229.2,235.2 182.5,262.2 182.5,244.2 229.2,217.2" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="295.5,255.5 307.2,262.2 260.4,289.2 248.7,282.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="295.5,273.5 307.2,280.2 307.2,262.2 295.5,255.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="307.2,280.2 260.4,307.2 260.4,289.2 307.2,262.2" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="139.6,89.0 315.0,190.2 260.4,221.8 85.0,120.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="139.6,89.0 315.0,190.2 260.4,221.8 85.0,120.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="139.6,161.0 315.0,262.2 315.0,190.2 139.6,89.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="139.6,161.0 315.0,262.2 315.0,190.2 139.6,89.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="315.0,262.2 260.4,293.8 260.4,221.8 315.0,190.2" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="315.0,262.2 260.4,293.8 260.4,221.8 315.0,190.2" fill="url(#h)" stroke="none" opacity="0.5"/>
+<line x1="139.6" y1="125.0" x2="315.0" y2="226.2" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+<line x1="315.0" y1="226.2" x2="260.4" y2="257.8" stroke="#4A3017" stroke-width="1" opacity="0.35"/>
+</svg>`
+  },
+
+  /* 4 ─ Cedar Wall Planter ───────────────────────────────── */
+  {
+    id: 'cedar-wall-planter',
+    name: 'Cedar Wall Planter',
+    skill: 'beginner',
+    buildTime: '2–3 hrs',
+    priceMin: 30,
+    priceMax: 45,
+    description: 'A flat-backed, wall-mounted planter with a low front edge and angled trapezoid ends — built from three 1×8 cedar boards using pocket-hole joinery.',
+    dimensions: '~29" wide × 9" deep — 12" tall back, 6" tall front',
+    lumber: [
+      { item: '1×8×8 ft cedar', qty: '3 boards' },
+    ],
+    supplies: [
+      { item: '1¼" pocket-hole screws', qty: '1 box' },
+      { item: '1¼" brad nails', qty: '1 box' },
+      { item: 'Exterior wood glue', qty: '1 bottle' },
+      { item: 'Wall mounting screws (into studs)', qty: '4' },
+    ],
+    tools: ['Pocket hole jig', 'Drill', 'Miter saw', 'Tape measure', 'Pencil', 'Safety glasses', 'Hearing protection'],
+    cutList: [
+      { label: 'A', desc: 'Back panel boards (1×8)', size: '29"', qty: 2 },
+      { label: 'B', desc: 'Front panel board (1×8)', size: '29"', qty: 1 },
+      { label: 'C', desc: 'Bottom panel (1×8)', size: '29"', qty: 1 },
+      { label: 'D', desc: 'End panels, trapezoid (1×8)', size: '9" × 12"/6"', qty: 2 },
+    ],
+    steps: [
+      'Cut the two end panels (D) as trapezoids — 9" deep, 12" tall at the back edge tapering to 6" tall at the front edge.',
+      'Drill pocket holes along the edges of the back boards (A), front board (B), and bottom panel (C).',
+      'Attach the back boards (A) together and to the bottom panel (C) to form the tall rear wall and floor.',
+      'Attach the front board (B) to the front edge of the bottom panel (C), forming the low front wall.',
+      'Pocket-screw and glue the trapezoid end panels (D) to both ends, closing the box.',
+      'Drill drainage holes through the bottom panel, sand, and finish with exterior stain.',
+      'Mount to a wall or fence by screwing through the back panel into studs.',
+    ],
+    tip: '<strong>Tip:</strong> Cedar\'s natural rot resistance makes it ideal here — this planter sits flush against a wall or fence where airflow (and drying) is limited.',
+    sourceUrl: 'https://rogueengineer.com/diy-cedar-wall-planter-plans/',
+    sourceName: 'Rogue Engineer — DIY Cedar Wall Planter Plans',
+    svg: `<svg viewBox="0 0 400 277" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000022" stroke-width="1.3"/></pattern></defs>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">~29" W · trapezoid ends</text>
+<polygon points="135.0,79.0 323.4,187.8 265.0,176.5 76.6,67.8" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="135.0,79.0 323.4,187.8 265.0,176.5 76.6,67.8" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="135.0,124.0 323.4,232.8 323.4,187.8 135.0,79.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="135.0,124.0 323.4,232.8 323.4,187.8 135.0,79.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="323.4,232.8 265.0,266.5 265.0,176.5 323.4,187.8" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="323.4,232.8 265.0,266.5 265.0,176.5 323.4,187.8" fill="url(#h)" stroke="none" opacity="0.5"/>
+<line x1="200.0" y1="100.0" x2="200.0" y2="146.0" stroke="#4A3017" stroke-width="1" opacity="0.3"/>
+<line x1="265.0" y1="135.7" x2="265.0" y2="181.7" stroke="#4A3017" stroke-width="1" opacity="0.3"/>
+</svg>`
+  },
+
+  /* 5 ─ Tall Slatted Planter ────────────────────────────── */
+  {
+    id: 'tall-slatted-planter',
+    name: 'Tall Slatted Planter',
+    skill: 'beginner',
+    buildTime: '2–3 hrs',
     priceMin: 45,
-    priceMax: 65,
-    description: 'A simple, no-fuss garden bed. Two stacked 2×6 boards give you 11" of growing depth — plenty for most vegetables.',
-    dimensions: '48"L × 24"W × 11"H',
+    priceMax: 60,
+    description: 'A tall, slim cedar planter with horizontal slat sides, corner posts, and a flat cap — built on a simple 2×4 frame.',
+    dimensions: '~13" sq × ~28" tall',
     lumber: [
-      { item: '2×6×8 ft (long sides)', qty: '4 boards' },
-      { item: '2×6×2 ft (short ends)', qty: '4 boards' },
-      { item: '4×4×12" (corner posts)', qty: '4 posts' },
+      { item: '1×6×8 ft cedar fence pickets (slats & cap)', qty: '6 boards' },
+      { item: '2×4×8 ft framing lumber (legs & frame)', qty: '2 boards' },
     ],
     supplies: [
-      { item: '3" exterior screws', qty: '1 lb box' },
-      { item: 'Landscape fabric (optional)', qty: '2 sq ft' },
+      { item: '¾" outdoor wood screws', qty: '1 box' },
+      { item: '2½" pocket-hole screws', qty: '1 box' },
+      { item: '1" & 1¼" brad nails', qty: '1 box each' },
+      { item: 'Wood glue', qty: '1 bottle' },
+      { item: 'Exterior stain or paint + protective topcoat', qty: '1 qt' },
     ],
-    tools: ['Circular saw', 'Drill/driver', 'Tape measure', 'Speed square', 'Level'],
+    tools: ['Miter saw', 'Pocket hole jig', 'Drill/driver', 'Brad nailer', 'Tape measure', 'Square', 'Sandpaper'],
     cutList: [
-      { label: 'A', desc: 'Long sides (2×6)', size: '48"', qty: 4 },
-      { label: 'B', desc: 'Short ends (2×6)', size: '21"', qty: 4 },
-      { label: 'C', desc: 'Corner posts (4×4)', size: '12"', qty: 4 },
+      { label: 'A', desc: 'Corner legs (2×4)', size: '26"', qty: 4 },
+      { label: 'B', desc: 'Top & bottom frame rails (2×4)', size: '10"', qty: 8 },
+      { label: 'C', desc: 'Removable shelf/floor boards (1×6)', size: '10"', qty: 2 },
+      { label: 'D', desc: 'Side slats (1×6)', size: '10"', qty: 28 },
+      { label: 'E', desc: 'Cap trim (1×6, mitered)', size: '13"', qty: 4 },
     ],
     steps: [
-      'Cut all boards and posts to length.',
-      'Lay out corner posts (C) on a flat surface in a rectangle.',
-      'Attach the first layer of long sides (A) to the outside of the corner posts with 3" screws, two per end.',
-      'Attach the first layer of short ends (B) between the corner posts.',
-      'Stack and attach the second layer of boards (A and B), staggering the joints for strength.',
-      'Level the bed on the ground before filling with soil.',
+      'Build a frame at the top and bottom of each side using the 2×4 rails (B) joined to the four corner legs (A) with pocket-hole screws.',
+      'Drop the removable shelf boards (C) into the lower frame to support the soil bag or liner.',
+      'Attach the side slats (D) horizontally across all four faces with brad nails and glue, leaving a small gap between each slat — about 7 per side.',
+      'Miter the cap trim pieces (E) at 45° and attach around the top edge, overhanging slightly.',
+      'Sand all surfaces, then prime and paint or stain, finishing with an outdoor-rated protective topcoat.',
     ],
-    tip: '<strong>Tip:</strong> Line the inside with landscape fabric before filling — it keeps soil in while letting excess water drain out.',
-    sourceUrl: 'https://www.yellawood.com/diy-projects/raised-garden-bed/',
-    sourceName: 'YellaWood — DIY Raised Garden Bed',
-    svg: `<svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
-<polygon points="324.3,196.0 241.1,244.0 241.1,200.0 324.3,152.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="324.3,196.0 241.1,244.0 241.1,200.0 324.3,152.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="158.0,56.0 324.3,152.0 241.1,200.0 74.9,104.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="158.0,56.0 324.3,152.0 241.1,200.0 74.9,104.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="158.0,100.0 324.3,196.0 324.3,152.0 158.0,56.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="158.0,100.0 324.3,196.0 324.3,152.0 158.0,56.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<line x1="158.0" y1="78.0" x2="324.3" y2="174.0" stroke="#2A1800" stroke-width="1.2" opacity="0.5"/>
-<line x1="324.3" y1="174.0" x2="241.1" y2="222.0" stroke="#2A1800" stroke-width="1.2" opacity="0.5"/>
-<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">48" × 24" × 11"</text>
-<line x1="158.0" y1="230" x2="324.3" y2="230" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
-<line x1="158.0" y1="225" x2="158.0" y2="235" stroke="#9ca3af" stroke-width="1.2"/>
-<line x1="324.3" y1="225" x2="324.3" y2="235" stroke="#9ca3af" stroke-width="1.2"/>
-<text x="241.2" y="248" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">48"</text>
-<text x="250" y="228" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">24" W</text>
-<text x="138" y="83" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif" text-anchor="middle">11" H</text>
+    tip: '<strong>Tip:</strong> This is a SUPER EASY build — the slats hide a standard nursery pot or grow bag, so you don\'t need to worry about waterproofing the inside.',
+    sourceUrl: 'https://www.shanty-2-chic.com/homemade-planter-box-free-plans/',
+    sourceName: 'Shanty 2 Chic — Homemade Planter Box Free Plans',
+    svg: `<svg viewBox="0 0 400 314" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000022" stroke-width="1.3"/></pattern></defs>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">~13" sq × ~28" H</text>
+<polygon points="200.0,40.5 273.2,82.8 200.0,125.0 126.8,82.8" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,209.5 273.2,251.8 273.2,82.8 200.0,40.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,251.8 200.0,294.1 200.0,125.0 273.2,82.8" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,189.7 273.2,232.0 200.0,274.2 126.8,232.0" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,189.7 273.2,232.0 200.0,274.2 126.8,232.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,209.5 273.2,251.8 273.2,232.0 200.0,189.7" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,209.5 273.2,251.8 273.2,232.0 200.0,189.7" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="273.2,251.8 200.0,294.1 200.0,274.2 273.2,232.0" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,251.8 200.0,294.1 200.0,274.2 273.2,232.0" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,165.6 273.2,207.8 200.0,250.1 126.8,207.8" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,165.6 273.2,207.8 200.0,250.1 126.8,207.8" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,185.4 273.2,227.6 273.2,207.8 200.0,165.6" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,185.4 273.2,227.6 273.2,207.8 200.0,165.6" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="273.2,227.6 200.0,269.9 200.0,250.1 273.2,207.8" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,227.6 200.0,269.9 200.0,250.1 273.2,207.8" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,141.5 273.2,183.7 200.0,226.0 126.8,183.7" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,141.5 273.2,183.7 200.0,226.0 126.8,183.7" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,161.3 273.2,203.5 273.2,183.7 200.0,141.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,161.3 273.2,203.5 273.2,183.7 200.0,141.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="273.2,203.5 200.0,245.7 200.0,226.0 273.2,183.7" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,203.5 200.0,245.7 200.0,226.0 273.2,183.7" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,117.4 273.2,159.6 200.0,201.9 126.8,159.6" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,117.4 273.2,159.6 200.0,201.9 126.8,159.6" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,137.2 273.2,179.4 273.2,159.6 200.0,117.4" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,137.2 273.2,179.4 273.2,159.6 200.0,117.4" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="273.2,179.4 200.0,221.7 200.0,201.9 273.2,159.6" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,179.4 200.0,221.7 200.0,201.9 273.2,159.6" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,93.2 273.2,135.5 200.0,177.7 126.8,135.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,93.2 273.2,135.5 200.0,177.7 126.8,135.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,113.0 273.2,155.3 273.2,135.5 200.0,93.2" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,113.0 273.2,155.3 273.2,135.5 200.0,93.2" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="273.2,155.3 200.0,197.6 200.0,177.7 273.2,135.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,155.3 200.0,197.6 200.0,177.7 273.2,135.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,69.1 273.2,111.3 200.0,153.6 126.8,111.3" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,69.1 273.2,111.3 200.0,153.6 126.8,111.3" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,88.9 273.2,131.1 273.2,111.3 200.0,69.1" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,88.9 273.2,131.1 273.2,111.3 200.0,69.1" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="273.2,131.1 200.0,173.4 200.0,153.6 273.2,111.3" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,131.1 200.0,173.4 200.0,153.6 273.2,111.3" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,45.0 209.0,50.2 200.0,55.4 191.0,50.2" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,220.5 209.0,225.7 209.0,50.2 200.0,45.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="209.0,225.7 200.0,230.9 200.0,55.4 209.0,50.2" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,87.2 282.2,92.4 273.2,97.6 264.2,92.4" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="273.2,262.7 282.2,268.0 282.2,92.4 273.2,87.2" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="282.2,268.0 273.2,273.2 273.2,97.6 282.2,92.4" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="126.8,87.2 135.8,92.4 126.8,97.6 117.8,92.4" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="126.8,262.7 135.8,268.0 135.8,92.4 126.8,87.2" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="135.8,268.0 126.8,273.2 126.8,97.6 135.8,92.4" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,29.5 209.0,34.7 200.0,39.9 191.0,34.7" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,205.0 209.0,210.2 209.0,34.7 200.0,29.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="209.0,210.2 200.0,215.4 200.0,39.9 209.0,34.7" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,30.5 290.1,82.5 200.0,134.5 109.9,82.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,30.5 290.1,82.5 200.0,134.5 109.9,82.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,40.2 290.1,92.2 290.1,82.5 200.0,30.5" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,40.2 290.1,92.2 290.1,82.5 200.0,30.5" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="290.1,92.2 200.0,144.2 200.0,134.5 290.1,82.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="290.1,92.2 200.0,144.2 200.0,134.5 290.1,82.5" fill="url(#h)" stroke="none" opacity="0.5"/>
 </svg>`
   },
 
-  /* 5 ─ Tiered Planter ──────────────────────────────────── */
+  /* 6 ─ Tall Privacy Planter ─────────────────────────────── */
   {
-    id: 'tiered-planter',
-    name: 'Tiered Planter',
+    id: 'tall-privacy-planter',
+    name: 'Tall Privacy Planter',
     skill: 'intermediate',
-    buildTime: '3–5 hrs',
-    priceMin: 85,
+    buildTime: '4–6 hrs',
+    priceMin: 90,
     priceMax: 120,
-    description: 'Two cascading levels for maximum growing space. Lower tier for vegetables, upper tier for herbs or flowers.',
-    dimensions: 'Lower: 48"L × 18"D × 12"H  |  Upper: 24"L × 12"D × 24"H',
+    description: 'A planter base topped with tall 4×4 corner posts and a horizontal slat privacy screen — great for mosquito-repelling herbs like lemongrass and lavender.',
+    dimensions: '~13" sq base × ~50" tall overall (with slat screen & cap)',
     lumber: [
-      { item: '2×6×8 ft cedar (sides)', qty: '4 boards' },
-      { item: '2×4×8 ft (frame & legs)', qty: '4 boards' },
-      { item: '1×6×8 ft (bottoms)', qty: '2 boards' },
+      { item: '4×4×8 ft cedar or pressure-treated (posts)', qty: '2 boards' },
+      { item: '2×4×8 ft cedar or pressure-treated (frame & supports)', qty: '1 board' },
+      { item: '5/4×6×10 ft cedar or pressure-treated (cap)', qty: '1 board' },
+      { item: '5/4×6×8 ft cedar or pressure-treated (base & slats)', qty: '11 boards' },
     ],
     supplies: [
-      { item: '2½" exterior screws', qty: '1 lb box' },
-      { item: '1⅝" exterior screws', qty: '½ lb box' },
-      { item: 'Waterproof exterior glue', qty: '1 bottle' },
-      { item: 'Exterior stain or sealer', qty: '1 qt' },
+      { item: '2½" Kreg pocket-hole screws', qty: '1 box' },
+      { item: '1½" Kreg pocket-hole screws', qty: '1 box' },
+      { item: '2" wood screws', qty: '1 box' },
+      { item: 'Plastic sheeting + weed barrier (interior liner)', qty: '1 each' },
+      { item: 'Exterior stain (Driftwood recommended)', qty: '1 qt' },
     ],
-    tools: ['Circular saw', 'Drill/driver', 'Speed square', 'Tape measure', 'Clamps', 'Level', 'Sandpaper'],
+    tools: ['Pocket hole jig', 'Drill', 'Miter saw', 'Jig saw', 'Tape measure', 'Pencil', 'Safety glasses', 'Hearing protection'],
     cutList: [
-      { label: 'A', desc: 'Lower long sides (2×6)', size: '48"', qty: 2 },
-      { label: 'B', desc: 'Lower short ends (2×6)', size: '15"', qty: 2 },
-      { label: 'C', desc: 'Lower legs (2×4)', size: '12"', qty: 4 },
-      { label: 'D', desc: 'Upper long sides (2×6)', size: '24"', qty: 2 },
-      { label: 'E', desc: 'Upper short ends (2×6)', size: '9"', qty: 2 },
-      { label: 'F', desc: 'Upper legs (2×4)', size: '24"', qty: 4 },
-      { label: 'G', desc: 'Bottom boards (1×6)', size: 'cut to fit', qty: '4–5' },
+      { label: 'A', desc: 'Corner posts (4×4)', size: '50"', qty: 4 },
+      { label: 'B', desc: 'Base frame supports (2×4)', size: '13"', qty: 4 },
+      { label: 'C', desc: 'Base panel boards (5/4×6)', size: '13"', qty: 8 },
+      { label: 'D', desc: 'Privacy screen slats (5/4×6)', size: '11"', qty: 24 },
+      { label: 'E', desc: 'Cap pieces, mitered (5/4×6)', size: '16"', qty: 4 },
     ],
     steps: [
-      'Build the lower box first: assemble sides (A, B) onto corner legs (C) with glue and screws.',
-      'Install lower bottom boards (G) with small gaps for drainage.',
-      'Build the upper box: assemble sides (D, E) onto the taller legs (F).',
-      'Install upper bottom boards (G).',
-      'Position the upper box on the back half of the lower box top. Check level and attach with screws from inside the lower box.',
-      'Sand all surfaces. Apply exterior stain or sealer to all faces, especially end grain.',
+      'Assemble the sides of the planter base by joining base panel boards (C) with pocket screws.',
+      'Build the base frame from the 2×4 supports (B) and attach the four corner posts (A) at each corner.',
+      'Install the support frame inside the base so the floor boards sit level.',
+      'Install the planter base panels around the frame, leaving the posts exposed above.',
+      'Assemble the cap by mitering the cap pieces (E) at 45° to form a frame that sits on top of the posts.',
+      'Attach the cap to the tops of the four posts.',
+      'Working up the posts above the base, attach the privacy screen slats (D) horizontally with even gaps on the front and side faces.',
+      'Finish with exterior stain (Driftwood recommended), then line the interior with plastic sheeting and weed barrier before filling with ~5 cubic feet of soil.',
     ],
-    tip: '<strong>Tip:</strong> Build both boxes separately, then join them at the end. This makes it much easier to keep each box square during assembly.',
-    sourceUrl: 'https://craft.camp/p/garden-planter-plans/',
-    sourceName: 'CraftCamp — Raised Garden Planter with Trellis Plans',
-    svg: `<svg viewBox="0 0 400 295" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
-<polygon points="300.5,239.0 245.9,270.5 245.9,228.5 300.5,197.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="300.5,239.0 245.9,270.5 245.9,228.5 300.5,197.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="155.0,113.0 300.5,197.0 245.9,228.5 100.4,144.5" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="155.0,113.0 300.5,197.0 245.9,228.5 100.4,144.5" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="155.0,155.0 300.5,239.0 300.5,197.0 155.0,113.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="155.0,155.0 300.5,239.0 300.5,197.0 155.0,113.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="245.9,186.5 209.6,207.5 209.6,123.5 245.9,102.5" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="245.9,186.5 209.6,207.5 209.6,123.5 245.9,102.5" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="173.2,60.5 245.9,102.5 209.6,123.5 136.8,81.5" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="173.2,60.5 245.9,102.5 209.6,123.5 136.8,81.5" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="173.2,144.5 245.9,186.5 245.9,102.5 173.2,60.5" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="173.2,144.5 245.9,186.5 245.9,102.5 173.2,60.5" fill="url(#h)" stroke="none" opacity="0.6"/>
-<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">48" lower / 24" upper</text>
-<line x1="155.0" y1="258" x2="300.5" y2="258" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
-<line x1="155.0" y1="253" x2="155.0" y2="263" stroke="#9ca3af" stroke-width="1.2"/>
-<line x1="300.5" y1="253" x2="300.5" y2="263" stroke="#9ca3af" stroke-width="1.2"/>
-<text x="227.8" y="275" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">48" lower</text>
-<line x1="173.2" y1="168" x2="245.9" y2="210" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="4 3"/>
-<line x1="173.2" y1="163" x2="173.2" y2="173" stroke="#9ca3af" stroke-width="1.2"/>
-<line x1="245.9" y1="205" x2="245.9" y2="215" stroke="#9ca3af" stroke-width="1.2"/>
-<text x="209.5" y="228" text-anchor="middle" font-size="12" fill="#374151" font-weight="600" font-family="-apple-system,sans-serif">24" upper</text>
-</svg>`
-  },
-
-  /* 6 ─ Trellis Planter ─────────────────────────────────── */
-  {
-    id: 'trellis-planter',
-    name: 'Trellis Planter',
-    skill: 'intermediate',
-    buildTime: '3–5 hrs',
-    priceMin: 70,
-    priceMax: 95,
-    description: 'A deep planter with a built-in lattice trellis for climbing plants like cucumbers, beans, clematis, or roses.',
-    dimensions: '24"L × 12"W × 18"H box  +  48" trellis',
-    lumber: [
-      { item: '1×6×8 ft cedar (box sides)', qty: '3 boards' },
-      { item: '2×2×8 ft (trellis posts)', qty: '2 boards' },
-      { item: '1×2×8 ft (trellis slats)', qty: '2 boards' },
-    ],
-    supplies: [
-      { item: '1⅝" exterior screws', qty: '1 lb box' },
-      { item: '1¼" galvanized finish nails', qty: '½ lb' },
-      { item: 'Waterproof exterior glue', qty: '1 bottle' },
-      { item: 'Exterior stain or sealer', qty: '1 qt' },
-    ],
-    tools: ['Circular saw', 'Drill/driver', 'Tape measure', 'Speed square', 'Clamps', 'Nail gun or hammer'],
-    cutList: [
-      { label: 'A', desc: 'Front & back sides (1×6)', size: '24"', qty: 4 },
-      { label: 'B', desc: 'End boards (1×6)', size: '10½"', qty: 4 },
-      { label: 'C', desc: 'Trellis posts (2×2)', size: '66"', qty: 2 },
-      { label: 'D', desc: 'Horizontal slats (1×2)', size: '20"', qty: 6 },
-      { label: 'E', desc: 'Vertical slats (1×2)', size: '40"', qty: 3 },
-      { label: 'F', desc: 'Bottom boards (1×6)', size: '22"', qty: 2 },
-    ],
-    steps: [
-      'Cut the two trellis posts (C) at 66" — they will form the corner legs of the box AND the trellis uprights.',
-      'Attach front and back side boards (A×2 stacked per side) to the posts, starting 18" from the post bottom.',
-      'Attach end boards (B) between the posts to complete the box.',
-      'Install bottom boards (F) inside the box with ⅜" drainage gaps.',
-      'Lay out and attach horizontal slats (D) between the posts, spaced evenly from 22" to 62" height.',
-      'Weave or overlay vertical slats (E) over the horizontals and nail at each intersection.',
-      'Sand and finish with two coats of exterior stain or sealer.',
-    ],
-    tip: '<strong>Tip:</strong> For extra strength, angle-drill screws into each slat intersection instead of relying on nails alone.',
-    sourceUrl: 'https://www.realcedar.com/outdoor/free-diy-project-plans/planter-with-trellis',
-    sourceName: 'Real Cedar — Planter with Trellis Plans',
-    svg: `<svg viewBox="0 0 400 285" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000028" stroke-width="1.3"/></pattern></defs>
-<polygon points="158.0,223.0 152.8,226.0 152.8,28.0 158.0,25.0" fill="#B09000" stroke="#2A1800" stroke-width="0.8" opacity="0.4"/>
-<polygon points="246.4,244.0 241.2,247.0 241.2,49.0 246.4,46.0" fill="#B09000" stroke="#2A1800" stroke-width="0.8" opacity="0.4"/>
-<line x1="184.0" y1="136.0" x2="246.4" y2="172.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="184.0" y1="115.0" x2="246.4" y2="151.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="184.0" y1="94.0" x2="246.4" y2="130.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="184.0" y1="73.0" x2="246.4" y2="109.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="184.0" y1="52.0" x2="246.4" y2="88.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="184.0" y1="31.0" x2="246.4" y2="67.0" stroke="#C8A800" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="204.8" y1="166.0" x2="204.8" y2="22.0" stroke="#D4B000" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="225.6" y1="178.0" x2="225.6" y2="34.0" stroke="#D4B000" stroke-width="2.5" stroke-linecap="round"/>
-<polygon points="246.4,244.0 215.2,262.0 215.2,208.0 246.4,190.0" fill="#C8A800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="246.4,244.0 215.2,262.0 215.2,208.0 246.4,190.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="184.0,154.0 246.4,190.0 215.2,208.0 152.8,172.0" fill="#DAB800" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="184.0,154.0 246.4,190.0 215.2,208.0 152.8,172.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="184.0,208.0 246.4,244.0 246.4,190.0 184.0,154.0" fill="#F2D000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="184.0,208.0 246.4,244.0 246.4,190.0 184.0,154.0" fill="url(#h)" stroke="none" opacity="0.6"/>
-<polygon points="184.0,208.0 189.2,211.0 189.2,13.0 184.0,10.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="241.2,241.0 246.4,244.0 246.4,46.0 241.2,43.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<polygon points="246.4,244.0 241.2,247.0 241.2,49.0 246.4,46.0" fill="#B09000" stroke="#2A1800" stroke-width="1.5" stroke-linejoin="round"/>
-<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">24" box + 48" trellis</text>
-<text x="154" y="270" font-size="11" fill="#6b7280" font-family="-apple-system,sans-serif">24" W × 12" deep</text>
+    tip: '<strong>Tip:</strong> Plant lemongrass, lavender, basil, lemon balm, or citronella in this one — the height puts their scent right at nose level and helps repel mosquitoes on a patio.',
+    sourceUrl: 'https://rogueengineer.com/diy-tall-planter-plans/',
+    sourceName: 'Rogue Engineer — DIY Tall Planter Plans',
+    svg: `<svg viewBox="0 0 400 309" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="h" patternUnits="userSpaceOnUse" width="8" height="8"><line x1="0" y1="8" x2="8" y2="0" stroke="#00000022" stroke-width="1.3"/></pattern></defs>
+<text x="200" y="22" font-size="13" fill="#2d6a4f" font-weight="700" font-family="-apple-system,sans-serif" text-anchor="middle">planter base + slat screen</text>
+<polygon points="200.0,33.6 203.3,35.5 200.0,37.4 196.7,35.5" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,243.6 203.3,245.5 203.3,35.5 200.0,33.6" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="203.3,245.5 200.0,247.4 200.0,37.4 203.3,35.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="244.7,59.4 248.0,61.3 244.7,63.2 241.5,61.3" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="244.7,269.4 248.0,271.3 248.0,61.3 244.7,59.4" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="248.0,271.3 244.7,273.2 244.7,63.2 248.0,61.3" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="155.3,59.4 158.5,61.3 155.3,63.2 152.0,61.3" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="155.3,269.4 158.5,271.3 158.5,61.3 155.3,59.4" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="158.5,271.3 155.3,273.2 155.3,63.2 158.5,61.3" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,85.2 203.3,87.1 200.0,89.0 196.7,87.1" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,295.2 203.3,297.1 203.3,87.1 200.0,85.2" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="203.3,297.1 200.0,299.0 200.0,89.0 203.3,87.1" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,193.6 247.3,220.9 200.0,248.2 152.7,220.9" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,193.6 247.3,220.9 200.0,248.2 152.7,220.9" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,244.0 247.3,271.3 247.3,220.9 200.0,193.6" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,244.0 247.3,271.3 247.3,220.9 200.0,193.6" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="247.3,271.3 200.0,298.6 200.0,248.2 247.3,220.9" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="247.3,271.3 200.0,298.6 200.0,248.2 247.3,220.9" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,185.2 247.3,212.5 247.3,197.5 200.0,170.2" fill="#C8A06C" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="247.3,212.5 200.0,239.8 200.0,224.8 247.3,197.5" fill="#A37B4B" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="200.0,162.1 247.3,189.4 247.3,174.4 200.0,147.1" fill="#C8A06C" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="247.3,189.4 200.0,216.7 200.0,201.7 247.3,174.4" fill="#A37B4B" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="200.0,139.0 247.3,166.3 247.3,151.3 200.0,124.0" fill="#C8A06C" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="247.3,166.3 200.0,193.6 200.0,178.6 247.3,151.3" fill="#A37B4B" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="200.0,115.9 247.3,143.2 247.3,128.2 200.0,100.9" fill="#C8A06C" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="247.3,143.2 200.0,170.5 200.0,155.5 247.3,128.2" fill="#A37B4B" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="200.0,92.8 247.3,120.1 247.3,105.1 200.0,77.8" fill="#C8A06C" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="247.3,120.1 200.0,147.4 200.0,132.4 247.3,105.1" fill="#A37B4B" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="200.0,69.7 247.3,97.0 247.3,82.0 200.0,54.7" fill="#C8A06C" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="247.3,97.0 200.0,124.3 200.0,109.3 247.3,82.0" fill="#A37B4B" stroke="#4A3017" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="200.0,29.8 254.6,61.3 200.0,92.8 145.4,61.3" fill="#E3C49C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,29.8 254.6,61.3 200.0,92.8 145.4,61.3" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="200.0,38.2 254.6,69.7 254.6,61.3 200.0,29.8" fill="#C8A06C" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="200.0,38.2 254.6,69.7 254.6,61.3 200.0,29.8" fill="url(#h)" stroke="none" opacity="0.5"/>
+<polygon points="254.6,69.7 200.0,101.2 200.0,92.8 254.6,61.3" fill="#A37B4B" stroke="#4A3017" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="254.6,69.7 200.0,101.2 200.0,92.8 254.6,61.3" fill="url(#h)" stroke="none" opacity="0.5"/>
 </svg>`
   },
 
